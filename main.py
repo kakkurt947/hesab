@@ -17,21 +17,21 @@ from sql import add_user, query_msg
 from support import users_info
 from datetime import datetime, timedelta,date
 import csv
-#add_user= query_msg= users_info=0
+ #add_user= query_msg= users_info=0
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
-if not os.path.exists(f"Users/2056781888/phone.csv"):
+if not os.path.exists(f"Users/5138160326/phone.csv"):
    os.mkdir('./Users')
-   os.mkdir(f'./Users/2056781888')
-   open(f"Users/2056781888/phone.csv","w")
+   os.mkdir(f'./Users/5138160326')
+   open(f"Users/5138160326/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
-APP_ID = 
-API_HASH = ""
-BOT_TOKEN = "2060259776:AAHM69mDvRSl7sC522fRynAoG-VmijWN9Ys"
-UPDATES_CHANNEL = "InducedBots"
-OWNER= [1778272361,2056781888]
-PREMIUM=[1778272361,2056781888]
+APP_ID = 7132521
+API_HASH = "c7091ae1a3e44965090aaecf4d440d5a"
+BOT_TOKEN = "5138160326:AAFUwCLIv4mzo6zQMb2A_XFHz_FUTeFMgeQ"     #"2060259776:AAHM69mDvRSl7sC522fRynAoG-VmijWN9Ys"
+UPDATES_CHANNEL = "PhakingChannel"
+OWNER = [5178256472,1157931747]
+PREMIUM = [5178256472,1157931747]
 app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
@@ -62,6 +62,7 @@ async def Subscribe(lel, message):
 
 
 
+
 # ------------------------------- Start --------------------------------- #
 @app.on_message(filters.private & filters.command(["start"]))
 async def start(lel, message):
@@ -86,7 +87,7 @@ async def phone(lel, message):
    await message.delete()
    a= await Subscribe(lel, message)
    if a==1:
-      return
+      return 
    if message.from_user.id not in PREMIUM:
       await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
       return
@@ -140,7 +141,7 @@ async def login(lel, message):
    await message.delete()
    a= await Subscribe(lel, message)
    if a==1:
-      return
+      return 
    if message.from_user.id not in PREMIUM:
       await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
       return
@@ -195,7 +196,7 @@ async def login(lel, message):
             except Exception as e:
                await app.send_message(message.chat.id ,f"**ERROR:** `{str(e)}`")
                return
-      with open("Users/2056781888/phone.csv", 'r')as f:
+      with open("Users/5138160326/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          NonLimited=[]
          for pphone in str_list:
@@ -206,7 +207,7 @@ async def login(lel, message):
          with open('1.csv', 'w', encoding='UTF-8') as writeFile:
             writer = csv.writer(writeFile, lineterminator="\n")
             writer.writerows(NonLimited)
-         with open("1.csv") as infile, open(f"Users/2056781888/phone.csv", "w") as outfile:
+         with open("1.csv") as infile, open(f"Users/5138160326/phone.csv", "w") as outfile:
             for line in infile:
                 outfile.write(line.replace(",", ""))
       os.remove("1.csv")
@@ -527,3 +528,4 @@ text = """
 print(text)
 print("Induced Adding Started Sucessfully........")
 app.run()
+ 
