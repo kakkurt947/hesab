@@ -76,7 +76,7 @@ async def start(lel, message):
    user_name = '@' + message.from_user.username if message.from_user.username else None
    await add_user(id, user_name)
    but = InlineKeyboardMarkup([[InlineKeyboardButton("Login✅", callback_data="Login"), InlineKeyboardButton("Adding💯", callback_data="Adding") ],[InlineKeyboardButton("Phone⚙️", callback_data="Edit"), InlineKeyboardButton("PhoneSee💕", callback_data="Ish")],[InlineKeyboardButton("Phone Remove⚙️", callback_data="Remove"), InlineKeyboardButton("AdminPannel", callback_data="Admin")]])
-   await message.reply_text(f"**Hi** `{message.from_user.first_name}` **!\n\nI'm Induced Scraper Bot \nMade for doing Scraping for free,\nWithout Using Any Use of Python.\n\nMade with ❤️ By @InducedBots**", reply_markup=but)
+   await message.reply_text(f"**Hi** `{message.from_user.first_name}` **!\n\nI'm Induced Scraper Bot \nMade for doing Scraping for free,\nWithout Using Any Use of Python.\n\nMade with ❤️ By @tech_with_monu**", reply_markup=but)
 
 
 
@@ -89,7 +89,7 @@ async def phone(lel, message):
    if a==1:
       return 
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @tech_with_monu**")
       return
    if not os.path.exists(f"Users/{message.from_user.id}/phone.csv"):
       os.mkdir(f'./Users/{message.from_user.id}')
@@ -101,17 +101,17 @@ async def phone(lel, message):
       for pphone in str_list:
          a+=1
          NonLimited.append(str(pphone))
-      number = await app.ask(chat_id=message.chat.id, text="**Enter number of accounts to Login (in intiger)\n\nMade with ❤️ By @InducedBots**")
+      number = await app.ask(chat_id=message.chat.id, text="**Enter number of accounts to Login (in intiger)\n\nMade with ❤️ By @tech_with_monu**")
       n = int(number.text)
       a+=n
       if n<1 :
-         await app.send_message(message.chat.id, """**Invalid Format less then 1 Try again\n\nMade with ❤️ By @InducedBots**""")
+         await app.send_message(message.chat.id, """**Invalid Format less then 1 Try again\n\nMade with ❤️ By @tech_with_monu**""")
          return
       if a>100:
-         await app.send_message(message.chat.id, f"**You can add only {100-a} Phone no \n\nMade with ❤️ By @InducedBots**")
+         await app.send_message(message.chat.id, f"**You can add only {100-a} Phone no \n\nMade with ❤️ By @tech_with_monu**")
          return
       for i in range (1,n+1):
-         number = await app.ask(chat_id=message.chat.id, text="**Now Send Your Telegram Account's Phone Number in International Format. \nIncluding **Country Code**. \nExample: **+14154566376 = 14154566376 only not +**\n\nMade with ❤️ By @InducedBots**")
+         number = await app.ask(chat_id=message.chat.id, text="**Now Send Your Telegram Account's Phone Number in International Format. \nIncluding **Country Code**. \nExample: **+14154566376 = 14154566376 only not +**\n\nMade with ❤️ By @tech_with_monu**")
          phone = number.text
          if "+" in phone:
             await app.send_message(message.chat.id, """**As Mention + is not include\n\nMade with ❤️ By @InducedBots**""")
