@@ -26,10 +26,10 @@ if not os.path.exists(f"Users/5138160326/phone.csv"):
    open(f"Users/5138160326/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
-APP_ID = 
-API_HASH = ""
-BOT_TOKEN = "5138160326:AAFUwCLIv4mzo6zQMb2A_XFHz_FUTeFMgeQ"     #"2060259776:AAHM69mDvRSl7sC522fRynAoG-VmijWN9Ys"
-UPDATES_CHANNEL = "PhakingChannel"
+APP_ID = 3755621
+API_HASH = "86a96994dce114bb1b4bd4167c87a62b"
+BOT_TOKEN = "5238497342:AAG_XvKexNJIFIg8yJnZUVnGIcVmImhqXxE"     #"2060259776:AAHM69mDvRSl7sC522fRynAoG-VmijWN9Ys"
+UPDATES_CHANNEL = "tech_with_monu"
 OWNER = [5178256472,1157931747]
 PREMIUM = [5178256472,1157931747]
 app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
@@ -51,7 +51,7 @@ async def Subscribe(lel, message):
       try:
          user = await app.get_chat_member(update_channel, message.chat.id)
          if user.status == "kicked":
-            await app.send_message(chat_id=message.chat.id,text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/InducedBotsSupport).", parse_mode="markdown", disable_web_page_preview=True)
+            await app.send_message(chat_id=message.chat.id,text="Sorry Sir, You are Banned. Contact My [MASTER](https://t.me/MONUMISHRA_XD).", parse_mode="markdown", disable_web_page_preview=True)
             return 1
       except UserNotParticipant:
          await app.send_message(chat_id=message.chat.id, text="**Please Join My Updates Channel To Use Me!\n and click on to Check /start**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🤖 Join Updates Channel 🤖", url=f"https://t.me/{update_channel}")]]), parse_mode="markdown")
