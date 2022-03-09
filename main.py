@@ -256,13 +256,13 @@ async def to(lel, message):
    if a==1:
       return
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n500rs per Month\nDm @monumishra_xd\n\nMade with ❤️ By @tech_with_monu**")
       return
-   number = await app.ask(chat_id=message.chat.id, text="**Now Send the From Group Username \n\nMade with ❤️ By @InducedBots**")
+   number = await app.ask(chat_id=message.chat.id, text="**Now Send the From Group Username \n\nMade with ❤️ By @tech_with_monu**")
    From = number.text
-   number = await app.ask(chat_id=message.chat.id, text="**Now Send the To Group Username \n\nMade with ❤️ By @InducedBots**")
+   number = await app.ask(chat_id=message.chat.id, text="**Now Send the To Group Username \n\nMade with ❤️ By @tech_with_monu**")
    To = number.text
-   number = await app.ask(chat_id=message.chat.id, text="**Now Send Start From  \n\nMade with ❤️ By @InducedBots**")
+   number = await app.ask(chat_id=message.chat.id, text="**Now Send Start From  \n\nMade with ❤️ By @tech_with_monu**")
    a = int(number.text)
    di=a
    try:
@@ -285,12 +285,12 @@ async def to(lel, message):
                      continue
                   if (ra-di)>150:
                      await client.disconnect()
-                     r+="**\nMade with ❤️ By @InducedBots**"
+                     r+="**\nMade with ❤️ By @tech_with_monu**"
                      await app.send_message(chat_id=message.chat.id, text=f"{r}")
-                     await app.send_message(message.chat.id, f"**Error: {phone} Due to Some Error Moving to Next no\n\nMade with ❤️ By @InducedBots**")
+                     await app.send_message(message.chat.id, f"**Error: {phone} Due to Some Error Moving to Next no\n\nMade with ❤️ By @tech_with_monu**")
                      break
                   if dad>40:
-                     r+="**\nMade with ❤️ By @InducedBots**"
+                     r+="**\nMade with ❤️ By @tech_with_monu**"
                      await app.send_message(chat_id=message.chat.id, text=f"{r}")
                      r="**Adding Start**\n\n"
                      dad=0
@@ -299,7 +299,7 @@ async def to(lel, message):
                except errors.FloodWaitError as s:
                   status= f'FloodWaitError for {s.seconds} sec'
                   await client.disconnect()
-                  r+="**\nMade with ❤️ By @InducedBots**"
+                  r+="**\nMade with ❤️ By @tech_with_monu**"
                   await app.send_message(chat_id=message.chat.id, text=f"{r}")
                   await app.send_message(chat_id=message.chat.id, text=f'**FloodWaitError for {s.seconds} sec\nMoving To Next Number**')
                   break
@@ -339,9 +339,9 @@ async def to(lel, message):
                dad+=1
                a+=1
    except Exception as e:
-      await app.send_message(chat_id=message.chat.id, text=f"Error: {e} \n\n Made with ❤️ By @InducedBots")
+      await app.send_message(chat_id=message.chat.id, text=f"Error: {e} \n\n Made with ❤️ By @tech_with_monu")
  except Exception as e:
-   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @InducedBots**")
+   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @tech_with_monu**")
    return
 
 
@@ -353,7 +353,7 @@ async def start(lel, message):
    if a==1:
       return
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n500rs per Month\nDm @monumishra_xd\n\nMade with ❤️ By @tech_with_monu**")
       return
    try:
       with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
@@ -365,12 +365,12 @@ async def start(lel, message):
             dad+=1
             da+=1
             if dad>40:
-               de+="**\nMade with ❤️ By @InducedBots**"
+               de+="**\nMade with ❤️ By @tech_with_monu**"
                await app.send_message(chat_id=message.chat.id, text=f"{de}")
                de="**Your Phone Numbers are**\n\n"
                dad=0 
             de+=(f"**{da}).** `{int(pphone)}`\n")
-         de+="**\nMade with ❤️ By @InducedBots**"
+         de+="**\nMade with ❤️ By @tech_with_monu**"
          await app.send_message(chat_id=message.chat.id, text=f"{de}")
 
    except Exception as a:
