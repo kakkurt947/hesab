@@ -30,8 +30,8 @@ APP_ID = 3755621
 API_HASH = "86a96994dce114bb1b4bd4167c87a62b"
 BOT_TOKEN = "5238497342:AAG_XvKexNJIFIg8yJnZUVnGIcVmImhqXxE"     #"2060259776:AAHM69mDvRSl7sC522fRynAoG-VmijWN9Ys"
 UPDATES_CHANNEL = "tech_with_monu"
-OWNER = [5178256472,1157931747]
-PREMIUM = [5178256472,1157931747]
+OWNER = [5048723127,1157931747]
+PREMIUM = [5048723127,1157931747]
 app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
@@ -223,16 +223,16 @@ async def login(lel, message):
          stats='you are limited'
          l.append(str(phone))
       me = await client.get_me()
-      await app.send_message(message.chat.id, f"Login Successfully✅ Done.\n\n**Name:** {me.first_name}\n**Username:** {me.username}\n**Phone:** {phone}\n**SpamBot Stats:** {stats}\n\n**Made with ❤️ By @InducedBots**")     
+      await app.send_message(message.chat.id, f"Login Successfully✅ Done.\n\n**Name:** {me.first_name}\n**Username:** {me.username}\n**Phone:** {phone}\n**SpamBot Stats:** {stats}\n\n**Made with ❤️ By @tech_with_monu**")     
       po+=1
       await client.disconnect()
      except ConnectionError:
       await client.disconnect()
       await client.connect()
      except TypeError:
-      await app.send_message(message.chat.id, "**You have not enter the phone number \nplease edit Config⚙️ by camand /start.\n\nMade with ❤️ By @InducedBots**")  
+      await app.send_message(message.chat.id, "**You have not enter the phone number \nplease edit Config⚙️ by camand /start.\n\nMade with ❤️ By @tech_with_monu**")  
      except Exception as e:
-      await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @tech_with_monu**")
     for ish in l:
       r.append(str(ish))
     with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
@@ -241,9 +241,9 @@ async def login(lel, message):
     with open(f"Users/{message.from_user.id}/1.csv") as infile, open(f"Users/{message.from_user.id}/phone.csv", "w") as outfile:
       for line in infile:
          outfile.write(line.replace(",", "")) 
-    await app.send_message(message.chat.id, f"**All Acc Login {s} Account Available of {po} \n\nMade with ❤️ By @InducedBots**") 
+    await app.send_message(message.chat.id, f"**All Acc Login {s} Account Available of {po} \n\nMade with ❤️ By @tech_with_monu**") 
  except Exception as e:
-   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @InducedBots**")
+   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @tech_with_monu**")
    return
                           
 
@@ -385,7 +385,7 @@ async def start(lel, message):
    if a==1:
       return
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n500rs per Month\nDm @monumishra_xd\n\nMade with ❤️ By @tech_with_monu**")
       return
    try:
       with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
@@ -404,7 +404,7 @@ async def start(lel, message):
    except Exception as a:
       pass
  except Exception as e:
-   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @InducedBots**")
+   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @tech_with_monu**")
    return
 
 # ------------------------------- Admin Pannel --------------------------------- #
@@ -415,9 +415,9 @@ async def subscribers_count(lel, message):
       return
    if message.from_user.id in OWNER:
       but = InlineKeyboardMarkup([[InlineKeyboardButton("Users✅", callback_data="Users")], [InlineKeyboardButton("Broadcast💯", callback_data="Broadcast")],[InlineKeyboardButton("AddUser", callback_data="New")], [InlineKeyboardButton("Check Users", callback_data="Check")]])
-      await app.send_message(chat_id=message.chat.id,text=f"**Hi** `{message.from_user.first_name}` **!\n\nWelcome to Admin Pannel of Induced Bot\n\nMade with ❤️ By @InducedBots**", reply_markup=but)
+      await app.send_message(chat_id=message.chat.id,text=f"**Hi** `{message.from_user.first_name}` **!\n\nWelcome to Admin Pannel of Induced Bot\n\nMade with ❤️ By @tech_with_monu**", reply_markup=but)
    else:
-      await app.send_message(chat_id=message.chat.id,text="**You are not owner of Bot \n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(chat_id=message.chat.id,text="**You are not owner of Bot \n\nMade with ❤️ By @tech_with_monu**")
 
 
 
@@ -427,19 +427,19 @@ async def button(app, update):
    k = update.data
    if "Login" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /login to login and check stats of Account.\n\nMade with ❤️ By @InducedBots**""") 
+      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /login to login and check stats of Account.\n\nMade with ❤️ By @tech_with_monu**""") 
    elif "Ish" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /phonesee to login and check stats of Account.\n\nMade with ❤️ By @InducedBots**""") 
+      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /phonesee to login and check stats of Account.\n\nMade with ❤️ By @tech_with_monu**""") 
    elif "Remove" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /remove to login and check stats of Account.\n\nMade with ❤️ By @InducedBots**""") 
+      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /remove to login and check stats of Account.\n\nMade with ❤️ By @tech_with_monu**""") 
    elif "Adding" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /adding to start adding from Login✅ Account.\n\nMade with ❤️ By @InducedBots**""") 
+      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /adding to start adding from Login✅ Account.\n\nMade with ❤️ By @tech_with_monu**""") 
    elif "Edit" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /phone to login and check stats of Account.\n\nMade with ❤️ By @InducedBots**""") 
+      await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /phone to login and check stats of Account.\n\nMade with ❤️ By @tech_with_monu**""") 
    elif "Home" in k:
       await update.message.delete()
       await app.send_message(update.message.chat.id, """**There is nothing no more..!\nJust Click on /start to Go Home.\n\nMade with ❤️ By @InducedBots**""") 
@@ -450,7 +450,7 @@ async def button(app, update):
       await msg.edit(f"Total:\n\nUsers - {messages[0]}\nBlocked - {messages[1]}")
    elif "New" in k:
       await update.message.delete()
-      number = await app.ask(chat_id=update.message.chat.id, text="**Send User Id Of New User\n\nMade with ❤️ By @InducedBots**")
+      number = await app.ask(chat_id=update.message.chat.id, text="**Send User Id Of New User\n\nMade with ❤️ By @tech_with_monu**")
       phone = int(number.text)
       with open("data.csv", encoding='UTF-8') as f:
          rows = csv.reader(f, delimiter=",", lineterminator="\n")
@@ -480,22 +480,22 @@ async def button(app, update):
             if d<=r:
                a+=1
                E+=f"{a}). {row[1]} - {row[2]}\n"
-         E+="\n\n**Made with ❤️ By @InducedBots**"
+         E+="\n\n**Made with ❤️ By @tech_with_monu**"
          await app.send_message(chat_id=update.message.chat.id,text=E)
 
    elif "Admin" in k:
       await update.message.delete()
       if update.message.chat.id in OWNER:
          but = InlineKeyboardMarkup([[InlineKeyboardButton("Users✅", callback_data="Users")], [InlineKeyboardButton("Broadcast💯", callback_data="Broadcast")],[InlineKeyboardButton("AddUser", callback_data="New")], [InlineKeyboardButton("Check Users", callback_data="Check")]])
-         await app.send_message(chat_id=update.message.chat.id,text=f"**Welcome to Admin Pannel of Induced Bot\n\nMade with ❤️ By @InducedBots**", reply_markup=but)
+         await app.send_message(chat_id=update.message.chat.id,text=f"**Welcome to Admin Pannel of Induced Bot\n\nMade with ❤️ By @tech_with_monu**", reply_markup=but)
       else:
-         await app.send_message(chat_id=update.message.chat.id,text="**You are not owner of Bot \n\nMade with ❤️ By @InducedBots**")
+         await app.send_message(chat_id=update.message.chat.id,text="**You are not owner of Bot \n\nMade with ❤️ By @tech_with_monu**")
    elif "Broadcast" in k:
     try:
       query = await query_msg()
       a=0
       b=0
-      number = await app.ask(chat_id=update.message.chat.id, text="**Now me message For Broadcast\n\nMade with ❤️ By @InducedBots**")
+      number = await app.ask(chat_id=update.message.chat.id, text="**Now me message For Broadcast\n\nMade with ❤️ By @tech_with_monu**")
       phone = number.text
       for row in query:
          chat_id = int(row[0])
@@ -510,7 +510,7 @@ async def button(app, update):
             pass
       await app.send_message(update.message.chat.id,f"Successfully Broadcasted to {a} Chats\nFailed - {b} Chats !")
     except Exception as e:
-      await app.send_message(update.message.chat.id,f"**Error: {e}\n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(update.message.chat.id,f"**Error: {e}\n\nMade with ❤️ By @tech_with_monu**")
 
 
 
