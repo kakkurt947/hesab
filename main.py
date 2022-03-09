@@ -28,7 +28,7 @@ if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 3755621
 API_HASH = "86a96994dce114bb1b4bd4167c87a62b"
-BOT_TOKEN = "5238497342:AAG_XvKexNJIFIg8yJnZUVnGIcVmImhqXxE"     #"2060259776:AAHM69mDvRSl7sC522fRynAoG-VmijWN9Ys"
+BOT_TOKEN = "5238497342:AAG_XvKexNJIFIg8yJnZUVnGIcVmImhqXxE"    
 UPDATES_CHANNEL = "tech_with_monu"
 OWNER = [5048723127,1157931747]
 PREMIUM = [5048723127,1157931747]
@@ -57,7 +57,7 @@ async def Subscribe(lel, message):
          await app.send_message(chat_id=message.chat.id, text="**Please Join My Updates Channel To Use Me!\n and click on to Check /start**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🤖 Join Updates Channel 🤖", url=f"https://t.me/{update_channel}")]]), parse_mode="markdown")
          return 1
       except Exception:
-         await app.send_message(chat_id=message.chat.id, text="**Something Went Wrong. Contact My [Support Group](https://t.me/InducedBotsSupport).**", parse_mode="markdown", disable_web_page_preview=True)
+         await app.send_message(chat_id=message.chat.id, text="**Something Went Wrong. Contact My [Support Group](https://t.me/tech_with_monu).**", parse_mode="markdown", disable_web_page_preview=True)
          return 1
 
 
@@ -76,7 +76,7 @@ async def start(lel, message):
    user_name = '@' + message.from_user.username if message.from_user.username else None
    await add_user(id, user_name)
    but = InlineKeyboardMarkup([[InlineKeyboardButton("Login✅", callback_data="Login"), InlineKeyboardButton("Adding💯", callback_data="Adding") ],[InlineKeyboardButton("Phone⚙️", callback_data="Edit"), InlineKeyboardButton("PhoneSee💕", callback_data="Ish")],[InlineKeyboardButton("Phone Remove⚙️", callback_data="Remove"), InlineKeyboardButton("AdminPannel", callback_data="Admin")]])
-   await message.reply_text(f"**Hi** `{message.from_user.first_name}` **!\n\nI'm Induced Scraper Bot \nMade for doing Scraping for free,\nWithout Using Any Use of Python.\n\nMade with ❤️ By @tech_with_monu**", reply_markup=but)
+   await message.reply_text(f"**Hi** `{message.from_user.first_name}` **!\n\nI'm MONU ADDER Bot \nMade for doing Scraping for,\nWithout Using Any Use of Python.\n\nMade with ❤️ By @tech_with_monu**", reply_markup=but)
 
 
 
@@ -89,7 +89,7 @@ async def phone(lel, message):
    if a==1:
       return 
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @tech_with_monu**")
+      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n500rs per Month\nDm @monumishra_xd\n\nMade with ❤️ By @tech_with_monu**")
       return
    if not os.path.exists(f"Users/{message.from_user.id}/phone.csv"):
       os.mkdir(f'./Users/{message.from_user.id}')
@@ -114,13 +114,13 @@ async def phone(lel, message):
          number = await app.ask(chat_id=message.chat.id, text="**Now Send Your Telegram Account's Phone Number in International Format. \nIncluding **Country Code**. \nExample: **+14154566376 = 14154566376 only not +**\n\nMade with ❤️ By @tech_with_monu**")
          phone = number.text
          if "+" in phone:
-            await app.send_message(message.chat.id, """**As Mention + is not include\n\nMade with ❤️ By @InducedBots**""")
+            await app.send_message(message.chat.id, """**As Mention + is not include\n\nMade with ❤️ By @tech_with_monu**""")
          elif len(phone)==11 or len(phone)==12:
             Singla = str(phone)
             NonLimited.append(Singla)
-            await app.send_message(message.chat.id, f"**{n}). Phone: {phone} Set Sucessfully✅\n\nMade with ❤️ By @InducedBots**")
+            await app.send_message(message.chat.id, f"**{n}). Phone: {phone} Set Sucessfully✅\n\nMade with ❤️ By @tech_with_monu**")
          else:
-            await app.send_message(message.chat.id, """**Invalid Number Format Try again\n\nMade with ❤️ By @InducedBots**""") 
+            await app.send_message(message.chat.id, """**Invalid Number Format Try again\n\nMade with ❤️ By @tech_with_monu**""") 
       NonLimited=list(dict.fromkeys(NonLimited))
       with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
          writer = csv.writer(writeFile, lineterminator="\n")
@@ -129,7 +129,7 @@ async def phone(lel, message):
          for line in infile:
             outfile.write(line.replace(",", ""))
  except Exception as e:
-   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @InducedBots**")
+   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @tech_with_monu**")
    return
 
 
@@ -143,7 +143,7 @@ async def login(lel, message):
    if a==1:
       return 
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
+      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n500rs per Month\nDm @monumishra_xd\n\nMade with ❤️ By @tech_with_monu**")
       return
    with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
     r=[]
