@@ -31,7 +31,7 @@ API_HASH = "86a96994dce114bb1b4bd4167c87a62b"
 BOT_TOKEN = "5238497342:AAHah9ztG8Qp4DeBLRU05hIADtr2fcv92iE"
 UPDATES_CHANNEL = "Tech_with_monu"
 OWNER = [1157931747]
-PREMIUM = [1157931747, 5048723127]
+PREMIUM = [1157931747,5048723127]
 app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
