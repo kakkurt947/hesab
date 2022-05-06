@@ -28,7 +28,7 @@ if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID =  3755621
 API_HASH = "86a96994dce114bb1b4bd4167c87a62b"
-BOT_TOKEN = "5238497342:AAHah9ztG8Qp4DeBLRU05hIADtr2fcv92iE"
+BOT_TOKEN = "5238497342:AAGZ9kpBxJCQUKCHgs0F1znWSsmbrfDmPNg"
 UPDATES_CHANNEL = "Tech_with_monu"
 OWNER = [1157931747]
 PREMIUM = [1157931747,5048723127]
