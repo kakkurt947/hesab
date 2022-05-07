@@ -1,5 +1,5 @@
 heroku3
-pyrogram
+pyrogram==1.4.16
 telethon
 pyromod
 tgcrypto
@@ -8,3 +8,10 @@ Pillow
 sqlalchemy~=1.3.23
 psycopg2-binary
 feedparser
+telethon-tgcrypto
+DateTime
+sqlalchemy==1.3.23
+python-dotenv
+gitpython
+hachoir
+aiofiles
