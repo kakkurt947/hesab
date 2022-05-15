@@ -29,7 +29,7 @@ if not os.path.exists('data.csv'):
 APP_ID =  7463143
 API_HASH = "4e8ef3f279f530489e3f1af1f457e8b3"
 BOT_TOKEN = "5395714639:AAEVcE5YbhacspgYBnGZkwRkkrkG-WG_hjo"
-UPDATES_CHANNEL = "Tech_with_monu"
+UPDATES_CHANNEL = "SohbetDestek"
 OWNER = [1957316197]
 PREMIUM = [1957316197,5048723127]
 app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
@@ -51,13 +51,13 @@ async def Subscribe(lel, message):
       try:
          user = await app.get_chat_member(update_channel, message.chat.id)
          if user.status == "kicked":
-            await app.send_message(chat_id=message.chat.id,text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/TWM_DISCUSSIONS).", parse_mode="markdown", disable_web_page_preview=True)
+            await app.send_message(chat_id=message.chat.id,text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/Sesekelele).", parse_mode="markdown", disable_web_page_preview=True)
             return 1
       except UserNotParticipant:
          await app.send_message(chat_id=message.chat.id, text="**Please Join My Updates Channel To Use Me!\n and click on to Check /start**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🤖 Join Updates Channel 🤖", url=f"https://t.me/{update_channel}")]]), parse_mode="markdown")
          return 1
       except Exception:
-         await app.send_message(chat_id=message.chat.id, text="**Something Went Wrong. Contact My [Support Group](https://t.me/TWM_DISCUSSIONS).**", parse_mode="markdown", disable_web_page_preview=True)
+         await app.send_message(chat_id=message.chat.id, text="**Something Went Wrong. Contact My [Support Group](https://t.me/Sesekelele).**", parse_mode="markdown", disable_web_page_preview=True)
          return 1
 
 
