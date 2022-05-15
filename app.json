@@ -3,7 +3,7 @@
     "description": "A Normal Telegram Bot",
     "logo": "",
     "keywords": ["Telegram","python"],
-    "repository": "https://github.com/MONU-GAMER/MONUADDER",
+    "repository": "https://github.com/Pulsar8806/Moun",
     "success_url": "https://t.me/t3j455",
     "env": {
         "API_ID": {
