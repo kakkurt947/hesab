@@ -23,7 +23,7 @@ if not os.path.exists('./sessions'):
 if not os.path.exists(f"Users/1957316197/phone.csv"):
    os.mkdir('./Users')
    os.mkdir(f'./Users/1957316197')
-   open(f"Users/5138160326/phone.csv","w")
+   open(f"Users/1957316197/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID =  7463143
