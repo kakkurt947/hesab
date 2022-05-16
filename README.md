@@ -1,4 +1,4 @@
-# Irregular Dızlama
+# İrregular Dızlama
 
 
 ## Yaparım Bilirsin Ağam :) 
