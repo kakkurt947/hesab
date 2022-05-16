@@ -1,7 +1,7 @@
 ### İrregular Dızlama
 
 
-## Yaparım Bilirsin Ağam :) 
+### Sıkıntı yok :) 
 
 #### Kolay Yol Botu Kur
 
