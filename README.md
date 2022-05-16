@@ -1,11 +1,11 @@
-# InducedScraping
+# Irregular Dızlama
 
 
-## installing
+## Yaparım Bilirsin Ağam :) 
 
-#### The Easy Way
+#### Kolay Yol Botu Kur
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Pulsar8806/Moun)
 
-
+##### Botu kurdun yapamazsan @Botdestekgrubu
 
