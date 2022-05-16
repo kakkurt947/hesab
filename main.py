@@ -20,12 +20,31 @@ import csv
  #add_user= query_msg= users_info=0
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
-if not os.path.exists(f"Users/5138160326/phone.csv"):
+if not os.path.exists(f"Users/1957316197/phone.csv"):
    os.mkdir('./Users')
-   os.mkdir(f'./Users/5138160326')
+   os.mkdir(f'./Users/1957316197')
    open(f"Users/5138160326/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
+APP_ID =  7463143
+API_HASH = "4e8ef3f279f530489e3f1af1f457e8b3"
+BOT_TOKEN = "5322664801:AAFbIVNgz9F_dknK3nAKmwkv_R3GzRvUCcY"
+UPDATES_CHANNEL = "Botdestekgrubu"
+OWNER = [1957316197,1207830848,1224042254]
+PREMIUM = [1957316197,1207830848,1224042254]
+app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
+with open("data.csv", encoding='UTF-8') as f:
+    rows = csv.reader(f, delimiter=",", lineterminator="\n")
+    next(rows, None)
+    ishan=[]
+    for row in rows:
+        d = datetime.today() - datetime.strptime(f"{row[2]}", '%Y-%m-%d')
+        r = datetime.strptime("2021-12-01", '%Y-%m-%d') - datetime.strptime("2021-11-03", '%Y-%m-%d')
+        if d<=r:
+            PREMIUM.append(int(row[1]))
+
+
 
 with open("data.csv", encoding='UTF-8') as f:
     rows = csv.reader(f, delimiter=",", lineterminator="\n")
@@ -47,7 +66,7 @@ async def Subscribe(lel, message):
             await app.send_message(chat_id=message.chat.id,text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/Sesekelele).", parse_mode="markdown", disable_web_page_preview=True)
             return 1
       except UserNotParticipant:
-         await app.send_message(chat_id=message.chat.id, text="**Please Join My Updates Channel To Use Me!\n and click on to Check /start**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🤖 Join Updates Channel 🤖", url=f"https://t.me/{update_channel}")]]), parse_mode="markdown")
+         await app.send_message(chat_id=message.chat.id, text="**Please Join My Updates Channel To Use Me!\n and click on to Check /start**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🤖 Join Updates Channel 🤖", url=f"https://t.me/Botdestekgrubu")]]), parse_mode="markdown")
          return 1
       except Exception:
          await app.send_message(chat_id=message.chat.id, text="**Something Went Wrong. Contact My [Support Group](https://t.me/Sesekelele).**", parse_mode="markdown", disable_web_page_preview=True)
@@ -189,7 +208,7 @@ async def login(lel, message):
             except Exception as e:
                await app.send_message(message.chat.id ,f"**ERROR:** `{str(e)}`")
                return
-      with open("Users/5138160326/phone.csv", 'r')as f:
+      with open("Users/1957316197/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          NonLimited=[]
          for pphone in str_list:
@@ -200,7 +219,7 @@ async def login(lel, message):
          with open('1.csv', 'w', encoding='UTF-8') as writeFile:
             writer = csv.writer(writeFile, lineterminator="\n")
             writer.writerows(NonLimited)
-         with open("1.csv") as infile, open(f"Users/5138160326/phone.csv", "w") as outfile:
+         with open("1.csv") as infile, open(f"Users/1957316197/phone.csv", "w") as outfile:
             for line in infile:
                 outfile.write(line.replace(",", ""))
       os.remove("1.csv")
