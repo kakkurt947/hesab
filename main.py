@@ -442,10 +442,10 @@ async def button(app, update):
       await app.send_message(update.message.chat.id, """**Yardım için burdayım..!\nSadece tıklayın /login Giriş yapmak ve Hesap istatistiklerini kontrol etmek için**""") 
    elif "Ish" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**Yardım için burdayım..!\nJust Click on /phonesee to login and check stats of Account.\n\nMade with ❤️ By @MONUMISHRA_XD**""") 
+      await app.send_message(update.message.chat.id, """**Yardım için burdayım..!\nSadece tıklayın /phonesee Giriş yapmak ve Hesap istatistiklerini kontrol etmek için.**""") 
    elif "Remove" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**Yardım için burdayım..!\nJust Click on /remove to login and check stats of Account.\n\nMade with ❤️ By @MONUMISHRA_XD**""") 
+      await app.send_message(update.message.chat.id, """**Yardım için burdayım..!\nSadece tıklayın /remove Giriş yapmak ve Hesap istatistiklerini kontrol etmek için.**""") 
    elif "Adding" in k:
       await update.message.delete()
       await app.send_message(update.message.chat.id, """**Yardım için burdayım..!\nSadece tıklayın /adding Giriş'ten eklemeye başlamak için ✅**""") 
