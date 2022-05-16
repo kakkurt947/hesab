@@ -268,7 +268,7 @@ async def to(lel, message):
    if a==1:
       return
    '''if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**Artık Premium Kullanıcı Değilsiniz\nPlease have a Subscripton\n200rs per Month\nDm @MONUMISHRA_XD\n\nMade with ❤️ By @MONUMISHRA_XD**")
+      await app.send_message(message.chat.id, f"**Artık Premium Kullanıcı Değilsiniz\nLütfen bir Alt Yazıya Sahip Olun\n200rs ayda\nİletişim için ❤️ By @OrmanCocuklariylaMucadele**")
       return'''
    number = await app.ask(chat_id=message.chat.id, text="**Şimdi Üye Alınacak Grubun Kullanıcı Adını Gönderin \n\nİletişim 💬 @Mahoaga**")
    From = number.text
@@ -299,7 +299,7 @@ async def to(lel, message):
                      await client.disconnect()
                      r+="**\nPm 💬 @OrmanCocuklariylaMucadele**"
                      await app.send_message(chat_id=message.chat.id, text=f"{r}")
-                     await app.send_message(message.chat.id, f"**Error: {phone} Due to Some Error Moving to Next no\n\nMade with ❤️ By @MONUMISHRA_XD**")
+                     await app.send_message(message.chat.id, f"**Hata: {phone} Bazı Hatalar Nedeniyle Sonrakne Taşınıyor**")
                      break
                   if dad>40:
                      r+="**\nPm 💬 @Mahoaga**"
@@ -403,7 +403,7 @@ async def start(lel, message):
       with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          f.closed
-         number = await app.ask(chat_id=message.chat.id, text="**Send Number to remove\n\nİletişim için Sahibime yazın @Mahoaga**")
+         number = await app.ask(chat_id=message.chat.id, text="**Kaldırılacak Numarayı Gönder\n\nİletişim için Sahibime yazın @Mahoaga**")
          print(str_list)
          str_list.remove(number.text)
          with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
@@ -412,7 +412,7 @@ async def start(lel, message):
          with open(f"Users/{message.from_user.id}/1.csv") as infile, open(f"Users/{message.from_user.id}/phone.csv", "w") as outfile:
             for line in infile:
                outfile.write(line.replace(",", ""))
-         await app.send_message(chat_id=message.chat.id,text="Done SucessFully")
+         await app.send_message(chat_id=message.chat.id,text="Başarıyla Tamamlandı")
    except Exception as a:
       pass
  except Exception as e:
