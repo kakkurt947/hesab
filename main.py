@@ -270,11 +270,11 @@ async def to(lel, message):
    '''if message.from_user.id not in PREMIUM:
       await app.send_message(message.chat.id, f"**Artık Premium Kullanıcı Değilsiniz\nLütfen bir Alt Yazıya Sahip Olun\n200rs ayda\nİletişim için ❤️ By @OrmanCocuklariylaMucadele**")
       return'''
-   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Üye Alınacak Grubun Kullanıcı Adını Gönderin \n\nİletişim 💬 @Mahoaga**")
+   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Üye Alınacak Grubun Kullanıcı Adını Gönderin")
    From = number.text
-   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Grubun Kullanıcı Adını Gönderin \n\nİletişim 💬 @OrmanCocuklariylaMucadele**")
+   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Grubun Kullanıcı Adını Gönderin**")
    To = number.text
-   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Başlat'ı Şuradan Gönder \n\nİletişim 💬 @OrmanCocuklariylaMucadele**")
+   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Üye çekmek için 1, 2, 3 gibi numara ver. Hadi başlat**")
    a = int(number.text)
    di=a
    try:
@@ -289,7 +289,7 @@ async def to(lel, message):
             client = TelegramClient(f"sessions/{phone}", APP_ID, API_HASH)
             await client.connect()
             await client(JoinChannelRequest(To))
-            await app.send_message(chat_id=message.chat.id, text=f"**Kazıma Başlangıcı**")
+            await app.send_message(chat_id=message.chat.id, text=f"**Üyeler Dızlanıyor....**")
             async for x in client.iter_participants(From, aggressive=True):
                try:
                   ra+=1
