@@ -40,7 +40,7 @@ with open("data.csv", encoding='UTF-8') as f:
     ishan=[]
     for row in rows:
         d = datetime.today() - datetime.strptime(f"{row[2]}", '%Y-%m-%d')
-        r = datetime.strptime("2021-12-01", '%Y-%m-%d') - datetime.strptime("2021-11-03", '%Y-%m-%d')
+        r = datetime.strptime("2022-12-01", '%Y-%m-%d') - datetime.strptime("2022-11-03", '%Y-%m-%d')
         if d<=r:
             PREMIUM.append(int(row[1]))
 
@@ -52,7 +52,7 @@ with open("data.csv", encoding='UTF-8') as f:
     ishan=[]
     for row in rows:
         d = datetime.today() - datetime.strptime(f"{row[2]}", '%Y-%m-%d')
-        r = datetime.strptime("2021-12-01", '%Y-%m-%d') - datetime.strptime("2021-11-03", '%Y-%m-%d')
+        r = datetime.strptime("2022-12-01", '%Y-%m-%d') - datetime.strptime("2022-11-03", '%Y-%m-%d')
         if d<=r:
             PREMIUM.append(int(row[1]))
 
@@ -172,7 +172,7 @@ async def login(lel, message):
          try:
             await client.send_code_request(phone)
          except FloodWait as e:
-            await message.reply(f"You Have Floodwait of {e.x} Seconds")
+            await message.reply(f"Kanka Flood {e.x} Saniye")
             return
          except PhoneNumberInvalidError:
             await message.reply("Telefon Numaranız Geçersiz.\n\nBasın /start yeniden başlamak için!")
@@ -192,7 +192,7 @@ async def login(lel, message):
             await message.reply("Geçersiz Kod.\n\nBasın /start yeniden başlamak için!")
             return
          except PhoneCodeExpiredError:
-            await message.reply("Code is Expired.\n\nPress /start yeniden başlamak için!")
+            await message.reply("Kodun Süresi Doldu.\n\nPress /start yeniden başlamak için!")
             return
          except SessionPasswordNeededError:
             try:
@@ -268,13 +268,13 @@ async def to(lel, message):
    if a==1:
       return
    '''if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**Artık Premium Kullanıcı Değilsiniz\nLütfen bir Alt Yazıya Sahip Olun\n200rs ayda\nİletişim için ❤️ By @OrmanCocuklariylaMucadele**")
+      await app.send_message(message.chat.id, f"**Artık Premium Kullanıcı Değilsiniz\nLütfen Ara ara çekim yapınız.**")
       return'''
    number = await app.ask(chat_id=message.chat.id, text="**Şimdi Üye Alınacak Grubun Kullanıcı Adını Gönderin")
    From = number.text
-   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Grubun Kullanıcı Adını Gönderin**")
+   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Kendi Grubunun Kullanıcı Adını Gönder**")
    To = number.text
-   number = await app.ask(chat_id=message.chat.id, text="**Şimdi Üye çekmek için 1, 2, 3 gibi numara ver. Hadi başlat**")
+   number = await app.ask(chat_id=message.chat.id, text="**Kaç Hesap Eklediysen. (Sayısını yazın. 1 2 3 4 5 gibi) Hadi üye çekelim.**")
    a = int(number.text)
    di=a
    try:
@@ -289,7 +289,7 @@ async def to(lel, message):
             client = TelegramClient(f"sessions/{phone}", APP_ID, API_HASH)
             await client.connect()
             await client(JoinChannelRequest(To))
-            await app.send_message(chat_id=message.chat.id, text=f"**Üyeler Dızlanıyor....**")
+            await app.send_message(chat_id=message.chat.id, text=f"**Üyeler Dızlanıyor Şefim....**")
             async for x in client.iter_participants(From, aggressive=True):
                try:
                   ra+=1
@@ -297,7 +297,7 @@ async def to(lel, message):
                      continue
                   if (ra-di)>150:
                      await client.disconnect()
-                     r+="**\nPm 💬 @OrmanCocuklariylaMucadele**"
+                     r+="**\nBotdestek @Botdestekgrubu**"
                      await app.send_message(chat_id=message.chat.id, text=f"{r}")
                      await app.send_message(message.chat.id, f"**Hata: {phone} Bazı Hatalar Nedeniyle Sonrakne Taşınıyor**")
                      break
@@ -324,7 +324,7 @@ async def to(lel, message):
                except ChatAdminRequiredError:
                   status="To Add Admin Required"
                except ValueError:
-                  status="Error In Entry"
+                  status="Girişte Hatavar"
                   await client.disconnect()
                   await app.send_message(chat_id=message.chat.id, text=f"{r}")
                   break
@@ -334,7 +334,7 @@ async def to(lel, message):
                      await app.send_message(chat_id=message.chat.id, text=f"{r}")
                      await app.send_message(chat_id=message.chat.id, text=f"**Çok Fazla PeerFloodError\nSonraki Numaraya Geçme**")
                      break
-                  status = 'PeerFloodError'
+                  status = 'Hata... Tekrar deneyiniz.'
                   peer+=1
                except ChatWriteForbiddenError as cwfe:
                   await client(JoinChannelRequest(To))
@@ -351,7 +351,7 @@ async def to(lel, message):
                dad+=1
                a+=1
    except Exception as e:
-      await app.send_message(chat_id=message.chat.id, text=f"Hata: {e} \n\nBilgi için @OrmanCocuklariylaMucadele")
+      await app.send_message(chat_id=message.chat.id, text=f"Hata: {e} n\n\ @Botdestekgrubu")
  except Exception as e:
    await app.send_message(message.chat.id, f"**Hata: {e}\n\nBilgi için @Mahoaga**")
    return
@@ -370,7 +370,7 @@ async def start(lel, message):
    try:
       with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
-         de="**Your Phone Numbers are**\n\n"
+         de="**Telefon Numaralarınız**\n\n"
          da=0
          dad=0
          for pphone in str_list:
