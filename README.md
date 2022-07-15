@@ -5,7 +5,7 @@
 
 #### Kolay Botu Kur 🤫
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Pulsar8806/Moun)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kakkurt947/hesab)
 
 
 <h4>🔺 Okteto ile Kurulum 🔻</h4> 
