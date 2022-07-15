@@ -1,4 +1,4 @@
-### İrregular Dızlama
+### T.g Üye Çekme Boat
 
 
 ### Sıkıntı yok :) 
@@ -7,5 +7,5 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Pulsar8806/Moun)
 
-##### Botu kurdun yapamazsan @Botdestekgrubu
+##### Botu kurdun yapamazsan @BotHastanesi
 
