@@ -1,3 +1,4 @@
+# Dızlar Dızlar Dızlar bot
 import re, os, random, asyncio, html,configparser,pyrogram, subprocess, requests, time, traceback, logging, telethon, csv, json, sys
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from asyncio.exceptions import TimeoutError
@@ -29,7 +30,7 @@ if not os.path.exists('data.csv'):
 APP_ID =  7463143
 API_HASH = "4e8ef3f279f530489e3f1af1f457e8b3"
 BOT_TOKEN = "5322664801:AAFbIVNgz9F_dknK3nAKmwkv_R3GzRvUCcY"
-UPDATES_CHANNEL = "Botdestekgrubu"
+UPDATES_CHANNEL = "BotHastanesi"
 OWNER = [1957316197,1207830848,1224042254]
 PREMIUM = [1957316197,1207830848,1224042254]
 app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
