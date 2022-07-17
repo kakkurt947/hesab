@@ -330,7 +330,7 @@ async def to(lel, message):
                   await app.send_message(chat_id=message.chat.id, text=f"{r}")
                   break
                except PeerFloodError:
-                  if peer == 10:
+                  if peer == 20:
                      await client.disconnect()
                      await app.send_message(chat_id=message.chat.id, text=f"{r}")
                      await app.send_message(chat_id=message.chat.id, text=f"**Çok Fazla PeerFloodError\nSonraki Numaraya Geçiniz**")
