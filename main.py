@@ -128,7 +128,7 @@ async def phone(lel, message):
          phone = number.text
          if "+" in phone:
             await app.send_message(message.chat.id, """**Alan kodu için + dahil değildir.\n\nBilgi için ❤️ @tommy47shelby**""")
-         elif len(phone)==11 or len(phone)==14:
+         elif len(phone)==14 or len(phone)==14:
             Singla = str(phone)
             NonLimited.append(Singla)
             await app.send_message(message.chat.id, f"**{n}). Telefon: {phone} Başarılı oldu ✅\n\nBilgi için @tommy47shelby**")
