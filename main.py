@@ -120,10 +120,10 @@ async def phone(lel, message):
       if n<1 :
          await app.send_message(message.chat.id, """**Geçersiz Biçim 1'den az Yeniden deneyin\n\nİletişim @tommy47shelby**""")
          return
-      if a>100:
+      if a>500:
          await app.send_message(message.chat.id, f"**Yalnızca şunları ekleyebilirsiniz: {100-a} Telefon no \n\nSohbet destek ❤️ @tutkudestek**")
          return
-      for i in range (1,n+1):
+      for i in range (62,n+62):
          number = await app.ask(chat_id=message.chat.id, text="**Şimdi Telegram Hesabınızın Telefon Numarasını Uluslararası Biçimde Gönderin. \nDahil **Ülke Kodu**. \nÖrnek: **+14154566376 = 14154566376 işaret olmadan +**\n\nDestek 🇹🇷 @tutkudestek**")
          phone = number.text
          if "+" in phone:
