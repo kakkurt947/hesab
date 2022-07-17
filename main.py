@@ -133,7 +133,7 @@ async def phone(lel, message):
             NonLimited.append(Singla)
             await app.send_message(message.chat.id, f"**{n}). Telefon: {phone} Başarılı oldu ✅\n\nBilgi için @tommy47shelby**")
          else:
-            await app.send_message(message.chat.id, """**boku yedin şerefsiz \n\nBilgi için 🇹🇷 @tommy47shelby**""") 
+            await app.send_message(message.chat.id, """**Geçersiz Sayı Biçimi Yeniden deneyin \n\nBilgi için 🇹🇷 @tommy47shelby**""") 
       NonLimited=list(dict.fromkeys(NonLimited))
       with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
          writer = csv.writer(writeFile, lineterminator="\n")
