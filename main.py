@@ -93,7 +93,7 @@ async def start(lel, message):
 
 
 
-# ------------------------------- Set Phone No --------------------------------- #
+# ------------------------------- numara kaydetme --------------------------------- #
 @app.on_message(filters.private & filters.command(["phone"]))
 async def phone(lel, message):
  try:
@@ -128,7 +128,7 @@ async def phone(lel, message):
          phone = number.text
          if "+" in phone:
             await app.send_message(message.chat.id, """**Alan kodu için + dahil değildir.\n\nBilgi için ❤️ @tommy47shelby**""")
-         elif len(phone)==11 or len(phone)==12:
+         elif len(phone)==11 or len(phone)==14:
             Singla = str(phone)
             NonLimited.append(Singla)
             await app.send_message(message.chat.id, f"**{n}). Telefon: {phone} Başarılı oldu ✅\n\nBilgi için @tommy47shelby**")
@@ -489,7 +489,7 @@ async def button(app, update):
          a=0
          for row in rows:
             d = datetime.today() - datetime.strptime(f"{row[2]}", '%Y-%m-%d')
-            r = datetime.strptime("2021-12-01", '%Y-%m-%d') - datetime.strptime("2021-11-03", '%Y-%m-%d')
+            r = datetime.strptime("2022-12-01", '%Y-%m-%d') - datetime.strptime("2022-11-03", '%Y-%m-%d')
             if d<=r:
                a+=1
                E+=f"{a}). {row[1]} - {row[2]}\n"
