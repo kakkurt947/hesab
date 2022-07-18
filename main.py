@@ -120,20 +120,20 @@ async def phone(lel, message):
       if n<1 :
          await app.send_message(message.chat.id, """**Geçersiz Biçim 1'den az Yeniden deneyin\n\nİletişim @tommy47shelby**""")
          return
-      if a>500:
+      if a>100:
          await app.send_message(message.chat.id, f"**Yalnızca şunları ekleyebilirsiniz: {100-a} Telefon no \n\nSohbet destek ❤️ @tutkudestek**")
          return
-      for i in range (62,n+62):
-         number = await app.ask(chat_id=message.chat.id, text="**Şimdi Telegram Hesabınızın Telefon Numarasını Uluslararası Biçimde Gönderin. \nDahil **Ülke Kodu**. \nÖrnek: **+6283853200954 = 6283853200954 işaret olmadan +**\n\nDestek 🇹🇷 @tutkudestek**")
+      for i in range (1,n+1):
+         number = await app.ask(chat_id=message.chat.id, text="**Şimdi Telegram Hesabınızın Telefon Numarasını Uluslararası Biçimde Gönderin. \nDahil **Ülke Kodu**. \nÖrnek: **+14154566376 = 14154566376 işaret olmadan +**\n\nDestek 🇹🇷 @tutkudestek**")
          phone = number.text
          if "+" in phone:
             await app.send_message(message.chat.id, """**Alan kodu için + dahil değildir.\n\nBilgi için ❤️ @tommy47shelby**""")
-         elif len(phone)==10 or len(phone)==15:
+         elif len(phone)==11 or len(phone)==16:
             Singla = str(phone)
             NonLimited.append(Singla)
             await app.send_message(message.chat.id, f"**{n}). Telefon: {phone} Başarılı oldu ✅\n\nBilgi için @tommy47shelby**")
          else:
-            await app.send_message(message.chat.id, """**Geçersiz Sayı Biçimi Yeniden deneyin \n\nBilgi için 🇹🇷 @tommy47shelby**""") 
+            await app.send_message(message.chat.id, """**Geçersiz Sayı Biçimi Yeniden deneyin\n\nBilgi için 🇹🇷 @tommy47shelby**""") 
       NonLimited=list(dict.fromkeys(NonLimited))
       with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
          writer = csv.writer(writeFile, lineterminator="\n")
