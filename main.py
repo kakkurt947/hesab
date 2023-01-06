@@ -21,18 +21,18 @@ import csv
  #add_user= query_msg= users_info=0
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
-if not os.path.exists(f"Users/5377241809/phone.csv"):
+if not os.path.exists(f"Users/5567909258/phone.csv"):
    os.mkdir('./Users')
-   os.mkdir(f'./Users/5377241809')
-   open(f"Users/5377241809/phone.csv","w")
+   os.mkdir(f'./Users/5567909258')
+   open(f"Users/5567909258/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID =  9544149
 API_HASH = "ec6038735b49819f89c26567dc43b161"
-BOT_TOKEN = "5509002435:AAHDl5J3CTSTvSfhvou_OrNiiMDbAmmjCX8"
+BOT_TOKEN = "5671809866:AAHAmQ_B_fv88Ta82U0eRXLBhfQLiEcuC_o"
 UPDATES_CHANNEL = "yangazlargrup"
-OWNER = [5377241809]
-PREMIUM = [5377241809]
+OWNER = [5567909258]
+PREMIUM = [5567909258]
 app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
